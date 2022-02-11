@@ -1,33 +1,5 @@
 const { Schema, model } = require('mongoose');
 
-// define Schema for Thought creation
-const ThoughtSchema = new Schema(
-    {
-        writtenBy: {
-            type: String,
-            required: true
-        },
-        commentBody: {
-            type: String,
-            required: true
-        },
-        createdAt: {
-            type: Date,
-            default: Date.now()
-        },
-        // use ReplySchema to validate data for a reply
-        reactions: [ReactionSchema]
-    },
-    {
-        toJSON: {
-            virtuals: true,
-            getters: true
-        },
-        id: false
-    }
-);
-
-
 // define Schema for Reaction creation
 const ReactionSchema = new Schema(
     {
@@ -58,7 +30,34 @@ const ReactionSchema = new Schema(
     }
 );
 
-CommentSchema.virtual('reactionCount').get(function() {
+// define Schema for Thought creation
+const ThoughtSchema = new Schema(
+    {
+        writtenBy: {
+            type: String,
+            required: true
+        },
+        commentBody: {
+            type: String,
+            required: true
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now()
+        },
+        // use ReplySchema to validate data for a reply
+        reactions: [ReactionSchema]
+    },
+    {
+        toJSON: {
+            virtuals: true,
+            getters: true
+        },
+        id: false
+    }
+);
+
+ThoughtSchema.virtual('reactionCount').get(function() {
     return this.reactions.length;
   });
 
