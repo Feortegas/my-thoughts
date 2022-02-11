@@ -8,6 +8,7 @@ const userController = {
                 path: 'friends',
                 select: '-__v'
             })
+            .select('-__v')
             // .sort({ friendName: ascending()})
             .then(dbUserData => res.json(dbUserData))
             .catch(err => {
