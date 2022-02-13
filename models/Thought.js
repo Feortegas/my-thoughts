@@ -33,11 +33,7 @@ const ReactionSchema = new Schema(
 // define Schema for Thought creation
 const ThoughtSchema = new Schema(
     {
-        writtenBy: {
-            type: String,
-            required: true
-        },
-        commentBody: {
+        thoughtBody: {
             type: String,
             required: true
         },
