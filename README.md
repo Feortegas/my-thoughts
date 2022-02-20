@@ -30,12 +30,13 @@ My Thoughts social network have the following features:
 - Mongoose
 - Insomnia
 - Git
-- GitHub
+- GitHub Repo: https://github.com/Feortegas/my-thoughts
 
 ## Tutorial
 
 Click on the following link to access the walkthrough video.
 
+- Start the application walkthrough: 
 - User features walkthrough: 
 - Thought features walkthrough:
 
