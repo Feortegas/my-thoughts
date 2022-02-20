@@ -11,12 +11,12 @@ const ReactionSchema = new Schema(
         },
         reactionBody: {
             type: String,
-            required: true
-        },
-        writtenBy: {
-            type: String,
             required: true,
-            trim: true
+            // match: [`^[A-Za-z0-9\W]{1,280}$`, 'Please enter a text between 1 and 280 characters']
+        },
+        username: {
+            type: String,
+            required: true
         },
         createdAt: {
             type: Date,
@@ -33,13 +33,18 @@ const ReactionSchema = new Schema(
 // define Schema for Thought creation
 const ThoughtSchema = new Schema(
     {
-        thoughtBody: {
+        thoughtText: {
             type: String,
-            required: true
+            required: true,
+            // match: [`^[A-Za-z0-9\W]{1,280}$`, 'Please enter a text between 1 and 280 characters']
         },
         createdAt: {
             type: Date,
             default: Date.now()
+        },
+        username: {
+            type: String,
+            required: true
         },
         // use ReplySchema to validate data for a reply
         reactions: [ReactionSchema]

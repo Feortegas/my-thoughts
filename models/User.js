@@ -5,15 +5,15 @@ const UserSchema = new Schema(
     {
         username: {
             type: String,
+            unique: true,
+            required: true,
+            trim: true
         },
         email: {
             type: String,
             unique: true,
+            required: true,
             match: [/.+@.+\..+/, 'Please enter a valid e-mail address']
-        },
-        createdAt: {
-            type: Date,
-            default: Date.now(),
         },
         thoughts: [
             {
@@ -24,7 +24,7 @@ const UserSchema = new Schema(
         friends: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'Friend'
+                ref: 'User'
             }
         ]
     },
