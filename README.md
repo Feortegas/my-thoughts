@@ -36,9 +36,9 @@ My Thoughts social network have the following features:
 
 Click on the following link to access the walkthrough video.
 
-- Start the application walkthrough: 
-- User features walkthrough: 
-- Thought features walkthrough:
+- Start the application walkthrough: https://drive.google.com/file/d/1Tf7NURg2zzDSC7_df2nMvsrGX0Py1LuB/view
+- User features walkthrough: https://drive.google.com/file/d/1AndNTIKsc6msjAXQkhJ_fmm8rZMrMu4H/view
+- Thought features walkthrough: https://drive.google.com/file/d/10W5X-roXV72H1Ba6dno6CzqbMxAq071b/view
 
 ## Creator
 
